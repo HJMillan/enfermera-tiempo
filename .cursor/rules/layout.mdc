@@ -1,0 +1,14 @@
+---
+description: Mobile first para iPhone 17 Pro y escritorio en Chromebook
+alwaysApply: true
+---
+
+# Layout
+
+Mobile first. Lo que no tiene prefijo es el teléfono. El escritorio entra con `lg:` (1024px).
+
+- iPhone 17 Pro: viewport CSS 402×874. Respetar `env(safe-area-inset-*)`. El header pinta la zona del status bar.
+- Chromebook: objetivo 1366×768. La altura es justa: chrome corto, `min-h-dvh`, y el contenido scrollea en `main`.
+- Área táctil mínima 44px (`min-h-11`). Nada que solo funcione con hover.
+- En Chromebook hay teclado: todo control muestra `:focus-visible`.
+- Alinear contenido a la izquierda. El ancho de lectura del texto se queda cerca de 40rem.

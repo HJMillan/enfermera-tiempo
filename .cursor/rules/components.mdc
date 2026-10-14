@@ -1,0 +1,22 @@
+---
+description: Los componentes compartidos viven en un solo lugar y se reutilizan
+alwaysApply: true
+---
+
+# Componentes
+
+La interfaz se arma con piezas compartidas. Una pantalla no crea su propio botón, barra o contenedor si ya existe uno.
+
+- Primitivas en `src/components/ui`, exportadas desde `src/components/ui/index.ts`.
+- Estructura de página (barra, navegación, área de contenido) en `src/components/layout`.
+- Pantallas y flujos en `src/features/<nombre>`. Importan desde esos barrels, no desde archivos internos.
+- Si un control aparece en más de un sitio, pasa a `ui` antes del segundo uso.
+- Alias `@/` para todo import dentro de `src`.
+
+```tsx
+// Bien
+import { Button } from '@/components/ui'
+
+// Mal: un botón armado con clases dentro de una pantalla
+<button className="min-h-11 bg-teal px-4">Guardar</button>
+```

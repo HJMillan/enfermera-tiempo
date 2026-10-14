@@ -1,1 +1,40 @@
 @import 'tailwindcss';
+
+/*
+  Paleta de marca, única fuente de color:
+  Light Cyan #CAF0F8, Frosted Blue #90E0EF, Turquoise Surf #00B4D8,
+  Bright Teal Blue #0077B6, Deep Twilight #03045E.
+  canvas, surface, ink, muted y line son roles derivados. No agregues hex en componentes.
+*/
+@theme {
+  --color-*: initial;
+
+  --color-cyan: #caf0f8;
+  --color-frost: #90e0ef;
+  --color-surf: #00b4d8;
+  --color-teal: #0077b6;
+  --color-twilight: #03045e;
+
+  --color-canvas: #caf0f8;
+  --color-surface: #ffffff;
+  --color-ink: #03045e;
+  --color-muted: #43508f;
+  --color-line: #6da9cb;
+  --color-on-primary: #ffffff;
+  --color-on-twilight: #caf0f8;
+
+  --font-sans: 'Atkinson Hyperlegible', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}

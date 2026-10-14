@@ -1,0 +1,21 @@
+---
+description: Colores y estilos salen de una sola paleta en index.css
+alwaysApply: true
+---
+
+# Estilos y color
+
+Todo el color sale de `src/index.css`. La paleta de marca es solo esta:
+
+- Light Cyan `#CAF0F8` → `cyan` / `canvas`
+- Frosted Blue `#90E0EF` → `frost`
+- Turquoise Surf `#00B4D8` → `surf`
+- Bright Teal Blue `#0077B6` → `teal`
+- Deep Twilight `#03045E` → `twilight` / `ink`
+
+`muted`, `line`, `surface`, `on-primary` y `on-twilight` son roles derivados. No son colores nuevos de marca.
+
+- Nada de hex, `bg-[#...]` ni paletas de Tailwind (`slate`, `gray`, `zinc`) en componentes.
+- Texto corrido: `text-ink` o `text-muted` sobre `bg-canvas` o `bg-surface`.
+- `surf` y `frost` son relleno, borde o foco. No texto chico.
+- Tipografía: Atkinson Hyperlegible, ya cargada en `src/main.tsx`. No sumes otra familia.
